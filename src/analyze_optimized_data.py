@@ -1,8 +1,35 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-优化WiFi日志数据分析脚本
-分析包含6种断连原因的优化数据集
+WiFi日志数据分析脚本
+==================
+
+功能说明:
+- 解析和分析WiFi事件日志文件
+- 专注于6种主要断连原因分析
+- 生成详细的统计报告和可视化图表
+- 支持客户端会话模式分析
+
+主要分析内容:
+1. 断连原因分布统计
+2. 客户端行为模式分析  
+3. 时间模式和高峰时段
+4. 可视化图表生成
+
+使用方法:
+    python analyze_optimized_data.py
+
+输出结果:
+- 控制台详细分析报告
+- optimized_wifi_analysis.png 可视化图表
+
+支持的reason code:
+- Code 1: 未指定原因
+- Code 3: 客户端主动离开
+- Code 4: 因不活跃断连
+- Code 5: AP过载
+- Code 15: 4-Way握手超时
+- Code 23: 802.1X认证失败
 """
 
 import re
